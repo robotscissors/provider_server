@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  title: MyString
+  gender: MyString
+  specializing_in: MyText
+  locations: MyText
+  specialties: MyText
+  professional_statement: MyText
+
+two:
+  name: MyString
+  title: MyString
+  gender: MyString
+  specializing_in: MyText
+  locations: MyText
+  specialties: MyText
+  professional_statement: MyText
