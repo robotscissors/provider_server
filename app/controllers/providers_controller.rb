@@ -10,6 +10,7 @@ class ProvidersController < ApplicationController
     # end
     self.updateDatabase
     puts "Messages: #{@messages}"
+    Profile.fetchProfile
     byebug
   end
 
