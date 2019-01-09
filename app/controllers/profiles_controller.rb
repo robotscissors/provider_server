@@ -1,7 +1,5 @@
 class ProfilesController < ApplicationController
-
-  def self.fetchProfile
-    puts "FETCHING PROFILES"
+  def index
+    @profiles = Profile.all
   end
-  
 end
