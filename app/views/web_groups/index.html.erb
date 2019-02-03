@@ -1,0 +1,22 @@
+<h1>List all webgroups</h1>
+Create a new web group <%= link_to "click here.", new_web_group_path() %>
+<table>
+  <thead>
+    <tr>
+      <th>Group Name</th>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @web_groups.each do |group| %>
+      <tr>
+        <td><%= group.group_name %></td>
+        <td><%= group.description %></td>
+        <td><%= link_to "Show", group %></td>
+        <td><%= link_to "Edit", edit_web_group_path(group.id) %></td>
+        <td><%= link_to "Delete", group, method: :delete, class: 'btn btn-danger', data: { confirm: 'Are you sure you want to delete this group?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

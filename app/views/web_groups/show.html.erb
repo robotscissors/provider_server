@@ -1,0 +1,4 @@
+<h1><%= @web_group.group_name %></h1>
+<p><%= @web_group.description %></p>
+<p><%= link_to "Edit", edit_web_group_path(@web_group), class: "btn btn-success" %></p>
+<p><%= link_to "Delete", @web_group, method: :delete, class: "btn btn-danger", data: { confirm: 'Are you sure you want to delete this entry?' } %>

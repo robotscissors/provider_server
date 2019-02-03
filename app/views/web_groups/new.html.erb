@@ -1,0 +1,30 @@
+<h2>New Web Group</h2>
+
+<div class="row">
+  <div class="col-md-8">
+    <%= form_for @web_group do |f| %>
+
+      <% if @web_group.errors.any? %>
+        <div class="alert alert-danger">
+          <h4><%= pluralize(@web_group.errors.count, "error") %>.</h4>
+          <ul>
+            <% @web_group.errors.full_messages.each do |msg| %>
+              <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+
+        <%= f.label :group_name %>
+        <%= f.text_field :group_name, autofocus: true, placeholder: "Group Name" %>
+
+
+        <%= f.label :description %>
+        <%= f.text_field :description, placeholder: "Short description of group" %>
+
+      <div class="form-group">
+        <%= f.submit "Create Group", class: 'btn btn-success' %>
+      </div>
+    <% end %>
+  </div>
+</div>
